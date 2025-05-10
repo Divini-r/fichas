@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Treino com GIFs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #007bff;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .price {
+      background-color: #ffc107;
+      color: #000;
+      padding: 10px;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .button {
+      display: block;
+      text-align: center;
+      background-color: #28a745;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 30px auto;
+      max-width: 300px;
+    }
+    .testimonials {
+      font-style: italic;
+      background-color: #e9ecef;
+      padding: 15px;
+      border-left: 4px solid #007bff;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ficha de Treino com Exercícios Animados em GIFs</h1>
+    <p>A maneira mais simples e eficiente de treinar com segurança e resultados!</p>
+  </header>
+
+  <div class="container">
+    <h2>✅ O que é?</h2>
+    <p>Um guia prático com séries completas de exercícios divididos por grupo muscular:</p>
+    <ul>
+      <li>Membros Superiores</li>
+      <li>Membros Inferiores</li>
+      <li>Tórax</li>
+      <li>Abdômen</li>
+    </ul>
+    <p>Cada exercício possui um GIF animado para execução correta do movimento.</p>
+
+    <h2>🎯 Para quem é?</h2>
+    <ul>
+      <li>Iniciantes que querem aprender da forma certa</li>
+      <li>Quem treina em casa</li>
+      <li>Alunos e profissionais como referência rápida</li>
+      <li>Quem busca resultados com segurança</li>
+    </ul>
+
+    <h2>📦 Você recebe:</h2>
+    <ul>
+      <li>Ficha de Treino por grupo muscular</li>
+      <li>Mais de 50 exercícios com GIFs</li>
+      <li>Sugestões de séries, repetições e descanso</li>
+      <li>Acesso digital imediato</li>
+      <li><strong>BÔNUS:</strong> Mini-guia “Como Montar Seu Próprio Treino”</li>
+    </ul>
+
+    <h2>🧠 Por que usar GIFs?</h2>
+    <ul>
+      <li>Evita dúvidas</li>
+      <li>Mostra o movimento completo</li>
+      <li>Facilita o aprendizado com segurança</li>
+    </ul>
+
+    <h2>🚀 Comece agora!</h2>
+    <ul>
+      <li>Download imediato após a compra</li>
+      <li>Compatível com qualquer dispositivo</li>
+      <li>Use sempre que quiser</li>
+    </ul>
+
+    <div class="price">
+      De <s>R$ 59,90</s> por apenas <strong>R$ 27,90</strong>!<br>
+      <small>Oferta por tempo limitado</small>
+    </div>
+
+    <a class="button" href="https://pay.cakto.com.br/onzcrve?affiliate=DJ66ZVTX" target="_blank">COMPRAR AGORA</a>
+
+    <h2>📢 Depoimentos</h2>
+    <div class="testimonials">
+      “Sempre errava a postura nos exercícios. Agora acertei tudo com os GIFs. Excelente!”<br>
+      – Camila R.
+    </div>
+    <div class="testimonials">
+      “A ficha é prática e os GIFs ajudam muito. Vale cada centavo.”<br>
+      – Rafael M.
+    </div>
+
+    <p style="text-align:center; margin-top: 30px; font-weight: bold;">
+      🔥 Oferta válida até: <span id="countdown">Carregando...</span>
+    </p>
+  </div>
+
+  <script>
+    // Define a data de expiração (ex: 3 dias a partir de agora)
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 3);
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = expirationDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerText = "Oferta expirada!";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
